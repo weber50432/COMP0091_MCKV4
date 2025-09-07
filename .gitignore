@@ -1,0 +1,128 @@
+# Large Data Directories - DO NOT COMMIT (3.5TB+ total)
+TCGA-WSI/
+TCGA-CLAM-graph/
+trident_processed/
+TCGA-patches/
+
+# Third-party libraries and builds
+pixman/
+
+# Don't ignore entire subdirectories, but ignore their large files and git histories
+# Remove any existing .git directories in subdirectories to avoid conflicts
+*//.git/
+*/**/.git/
+
+# Medical Image Files (very large)
+*.svs
+*.ndpi
+*.tiff
+*.tif
+*.mrxs
+*.vms
+*.vmu
+*.scn
+*.ome.tiff
+
+# Machine Learning Model Files
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.safetensors
+*.bin
+
+# Large Log and Output Files
+*.log
+logs/
+log/
+results/
+outputs/
+checkpoints/
+saved_models/
+
+# Specific large directories within subprojects
+*/results/
+*/checkpoints/
+*/saved_models/
+*/splits/
+*/heatmaps/demo/
+*/data/
+*/dataset/
+*/datasets/
+
+# Keep small config and example files
+!*config*.py
+!*example*.py
+!requirements.txt
+!*.yml
+!*.yaml
+!*.md
+!*.sh
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.coverage
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test output files
+test/h5_files/
+test/pt_files/
+test/graph_files/
+test/WSI/
+
+# Dataset directories
+data/
+dataset/
+datasets/
+raw_data/
+processed_data/
+features/
+embeddings/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# Large directories in subprojects
+splits/
+heatmaps/demo/
+SUGAR/dataset/
+pixman/pixman-0.40.0/
+
+# Wandb/MLflow logs
+wandb/
+mlruns/
